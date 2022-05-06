@@ -227,4 +227,13 @@ describe('USA postal code', () => {
             expect(zipCodes.validate('MO', '66000')).toBe(false);
         });
     });
+    describe('MT', ()=>{
+        it('should validate zip code', ()=>{
+            expect(zipCodes.validate('mt', '59937')).toBe(true);
+            expect(zipCodes.validate('MT', '59937')).toBe(true);
+            expect(zipCodes.validate('montana', '59001')).toBe(true);
+            expect(zipCodes.validate('MT', '65433')).toBe(false);
+            expect(zipCodes.validate('montana', '59000')).toBe(false);
+        });
+    });
 })
