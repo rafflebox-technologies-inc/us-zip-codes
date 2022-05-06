@@ -54,7 +54,7 @@ const wi = range(53001, 54990); // wisconsin
 const wy = range(82001, 83414); // wyoming
 
 
-const postalCodes = {
+const zipCodes = {
   'al': al,
   'ak': ak,
   'az': az,
@@ -115,6 +115,7 @@ const postalCodes = {
   'delaware': de,
   'florida': fl,
   'georgia': ga,
+  'hawaii': hi,
   'idaho': id,
   'illinois': il,
   'indiana': ind,
@@ -156,19 +157,17 @@ const postalCodes = {
   'wyoming': wy,
 }
 
-exports.validate = function validate(province, postal) {
-  const prefix = postalCodes[province.toLowerCase()];
-  console.log(typeof (prefix), 'prefix');
+exports.validate = function validate(province, zip) {
+  const prefix = zipCodes[province.toLowerCase()];
   if (prefix) {
     if (typeof(prefix) == 'string') {
-      return postal.toLowerCase().startsWith(prefix.toLowerCase())
+      return zip.toLowerCase().startsWith(prefix.toLowerCase())
     }
 
     if (typeof(prefix) == 'object') {
       let match = false
       prefix.forEach((p) => {
-        console.log(p, 'p', postal, 'postal');
-        if (postal.toLowerCase().startsWith(p)) {
+        if (zip.toLowerCase().startsWith(p)) {
           match = true
         }
       })

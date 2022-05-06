@@ -1,2 +1,2 @@
 # us-postal-codes
-Us postal codes
+Create npm package for validate US zip code
