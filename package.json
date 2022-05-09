@@ -1,21 +1,21 @@
 {
-  "name": "us-postal-codes",
+  "name": "us-zip-codes",
   "version": "1.0.0",
   "description": "USA postal code",
-  "main": "posta-codes.js",
+  "main": "index.js",
   "scripts": {
     "test": "jest --verbose --detectOpenHandles --config=jest.config.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rafflebox-technologies-inc/us-postal-codes.git"
+    "url": "git+https://github.com/rafflebox-technologies-inc/us-zip-codes.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/rafflebox-technologies-inc/us-postal-codes/issues"
+    "url": "https://github.com/rafflebox-technologies-inc/us-zip-codes/issues"
   },
-  "homepage": "https://github.com/rafflebox-technologies-inc/us-postal-codes#readme",
+  "homepage": "https://github.com/rafflebox-technologies-inc/us-zip-codes#readme",
   "devDependencies": {
     "jest": "~28.0.3"
   }

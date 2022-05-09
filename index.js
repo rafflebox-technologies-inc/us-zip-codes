@@ -1,7 +1,8 @@
 
 'use strict'
 
-const range = (min, max) => [...Array(max - min + 1).keys()].map(i => i + min);
+const range = (min, max) => [...Array(max - min + 1).keys()].map(i => String(i + min))
+
 const al = range(35004, 36925); // alabama
 const ak = range(99501, 99950); // alaska
 const az = range(85001, 86556); // arizona
@@ -159,23 +160,17 @@ const zipCodes = {
 
 exports.validate = function validate(province, zip) {
   const prefix = zipCodes[province.toLowerCase()];
+
   if (prefix) {
-    if (typeof(prefix) == 'string') {
-      return zip.toLowerCase().startsWith(prefix.toLowerCase())
-    }
-
     if (typeof(prefix) == 'object') {
-      let match = false
-      prefix.forEach((p) => {
-        if (zip.toLowerCase().startsWith(p)) {
-          match = true
-        }
-      })
 
-      return match
+      if (prefix.includes(String(zip))) {
+        return true
+      }
+      else {
+        return false
+      }
+
     }
-
-    return false
   }
-  return false
 }
