@@ -1,6 +1,4 @@
-const zipCodes = require('../zip-codes.js');
-// const zipCodes = require('../zip-codes-test.js');
-
+const zipCodes = require('../index.js');
 describe('USA postal code', () => {
     describe('AL', ()=> {
         it('should validate zip code', () => {

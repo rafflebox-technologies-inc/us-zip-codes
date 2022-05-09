@@ -2,7 +2,7 @@
   "name": "us-zip-codes",
   "version": "1.0.0",
   "description": "USA postal code",
-  "main": "zip-codes.js",
+  "main": "index.js",
   "scripts": {
     "test": "jest --verbose --detectOpenHandles --config=jest.config.js"
   },
