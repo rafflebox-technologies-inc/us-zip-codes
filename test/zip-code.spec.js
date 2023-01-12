@@ -452,4 +452,9 @@ describe('USA postal code', () => {
             expect(zipCodes.validate('WY', '89999')).toBe(false);
         });
     });
+    describe('ZIP+4', ()=> {
+        it('should validate zip code', () => {
+            expect(zipCodes.validate('PA', '16735-1309')).toBe(true);
+        });
+    });
 });
